@@ -1,0 +1,34 @@
+!!!
+html
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='Personal blog of Todd Bealmear.')
+    meta(name='author', content= "Todd Bealmear")
+
+    title Todd Bealmear
+
+    link(rel='stylesheet', href=raleway_url)
+    link(rel='stylesheet', href='/css/webfonts/ss-social.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/pygments.css')
+  body
+    .header
+      .container
+        section.title
+          a(href='/').
+            <strong>Todd</strong>Bealmear
+        ul.links
+          li: a.ss-icon.ss-social-circle(href=github_url) octocat
+          li: a.ss-icon.ss-social-circle(href=twitter_url) twitter
+          li: a.ss-icon.ss-social-circle(href=gplus_url) googleplus
+
+    != yield
+
+  //- add other scripts through require.js, not here
+  // No Javascript at the moment, so don't load it.
+  //script(data-main="js/main", src="js/require.js")
+
+  //- this must be included for live reload to work in developement
+  //- it will be automatically ignored when deployed
+  != livereload

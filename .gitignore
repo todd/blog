@@ -1,0 +1,4 @@
+*.DS_Store
+public/
+index-old.jade
+assets/css/webfonts
