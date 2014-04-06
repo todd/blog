@@ -1,4 +1,7 @@
-*.DS_Store
-public/
-index-old.jade
-assets/css/webfonts
+node_modules
+dist
+.tmp
+.sass-cache
+.DS_Store
+app/bower_components
+app/vendor

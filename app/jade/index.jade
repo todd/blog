@@ -1,0 +1,27 @@
+extends /layouts/_default
+
+block content
+  section.container.content
+    .post
+      .title-bar
+        span.post-title: a(href='#') Post Numero Uno
+        span.post-date 1/11/2013
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+      img(src='http://placehold.it/850x300')
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+      blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+    .post
+      .title-bar
+        span.post-title: a(href='#') Post Numero Dos
+        span.post-date 1/11/2013
+      p. Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+      p Lorem <code>ipsum dolor sit</code> amet, consectetur adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+      pre
+        code def foo(bar)<br />&nbsp;&nbsp; bar += 1<br />end
+      ul
+        li Foo
+        li Bar
+        li Baz
+  section.container.paginate
+    a(href='#') Older Posts
+    span.newer: a(href='#') Newer Posts
