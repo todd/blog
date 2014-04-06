@@ -1,0 +1,91 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+
+// Container Width Overrides
+@container-desktop:       ((800px + @grid-gutter-width));
+@container-md:            @container-desktop;
+
+@container-large-desktop: ((800px + @grid-gutter-width));
+@container-lg:            @container-large-desktop;
+
+// Body Overrides
+@font-family-base: raleway;
+@font-size-base:   20px;
+@font-size-large:  24px;
+
+// Anchor Overrides
+@link-color:       #333;
+@link-hover-color: #333;
+
+a:hover {
+  text-decoration: none;
+}
+
+// Navbar Overrides
+@navbar-height:                    30px;
+@navbar-default-bg:                #fff;
+@navbar-default-border:            #ccc;
+@navbar-default-link-color:        #333;
+@navbar-default-brand-hover-color: #333;
+
+navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-default {
+  opacity: .9;
+}
+
+.navbar-nav {
+  height: 30px;
+
+  > li {
+    padding: 5px 5px;
+
+    > a {
+      color: #777 !important;
+      padding: 0;
+      transition: color 0.2s ease-in;
+
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-color !important;
+      }
+    }
+  }
+}
+
+// Image Overrides
+img {
+  // Make images responsive by default
+  &:extend(.img-responsive);
+}
+
+// Type Overrides
+@blockquote-font-size: 16px;
+
+p {
+  line-height: 125%;
+
+  > a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+blockquote {
+  padding: 0 0 0 15px;
+}
+
+// Code Overrides
+pre {
+  font-size: 13px;
+}
+
+// Pager Overrides
+.pager {
+  font-size: 14px;
+}

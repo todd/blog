@@ -24,10 +24,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     folders: folders,
     watch: {
-      stylus: {
-        files: '<%= folders.app %>/styles/**/*.styl',
-        tasks: ['stylus']
-      },
       server: {
         options: {
           livereload: true
@@ -107,23 +103,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    stylus: {
-      compile: {
-        files: [{
-          expand: true,
-          cwd: '<%= folders.app %>/styles',
-          src: ['{,*/}*.styl', '!**/_*'],
-          dest: '<%= folders.tmp %>/styles',
-          ext: '.css'
-        }],
-        options: {
-          compress: false,
-          // convert the css url() declaration into nib inline imaging function
-          // this converts images smaller than 30kb to data url
-          urlfunc: 'url'
-        }
-      }
-    },
     less: {
       development: {
         options: {
@@ -132,7 +111,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "<%= folders.tmp %>/styles/bootstrap.css": "<%= folders.app %>/styles/bootstrap.less"
+          "<%= folders.tmp %>/styles/main.css": "<%= folders.app %>/styles/main.less"
         }
       }
     },
@@ -287,13 +266,13 @@ module.exports = function(grunt) {
     },
     concurrent: {
       server: [
-        'stylus'
+        'less'
       ],
       test: [
-        'stylus'
+        'less'
       ],
       dist: [
-        'stylus',
+        'less',
         'imagemin',
         'svgmin',
         'htmlmin'

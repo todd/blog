@@ -16,7 +16,7 @@ block content
           .title-bar
             span.post-title: a(href='#') Post Numero Dos
             span.post-date 1/11/2013
-          p. Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
+          p Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
           p Lorem <code>ipsum dolor sit</code> amet, consectetur adipiscing elit. Aliquam convallis quam at justo condimentum condimentum. Fusce arcu felis, fringilla nec varius a, rhoncus a libero. Donec ut ligula vitae leo pellentesque varius.
           pre
             code def foo(bar)<br />&nbsp;&nbsp; bar += 1<br />end
@@ -24,6 +24,9 @@ block content
             li Foo
             li Bar
             li Baz
-      .paginate
-        a(href='#') Older Posts
-        span.newer: a(href='#') Newer Posts
+
+      ul.pager
+        li.previous
+          a(href='#') &larr; Older Posts
+        li.next
+          a(href='#') Newer Posts &rarr;
