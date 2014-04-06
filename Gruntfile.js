@@ -32,7 +32,8 @@ module.exports = function(grunt) {
           '<%= folders.tmp %>/*.html',
           '<%= folders.tmp %>/styles/{,*/}*.css',
           '{.tmp,<%= folders.app %>}/scripts/{,*/}*.js',
-          '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= folders.app %>/vendor/{,*/}*'
         ]
       },
       jade: {
@@ -229,7 +230,8 @@ module.exports = function(grunt) {
             '*.{ico,txt}',
             '.htaccess',
             'images/{,*/}*.{webp,gif}',
-            'styles/fonts/*'
+            'styles/fonts/*',
+            'vendor/{,*/}{,*/}/*'
           ]
         }]
       },
