@@ -42,6 +42,13 @@ module.exports = function(grunt) {
       jade: {
         files: '<%= folders.app %>/jade/**/*.jade',
         tasks: ['jade']
+      },
+      less: {
+        files: ['<%= folders.app %>/styles/**/*.less'],
+        tasks: ['less'],
+        options: {
+          nospawn: true
+        }
       }
     },
     connect: {
@@ -114,6 +121,18 @@ module.exports = function(grunt) {
           // convert the css url() declaration into nib inline imaging function
           // this converts images smaller than 30kb to data url
           urlfunc: 'url'
+        }
+      }
+    },
+    less: {
+      development: {
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2
+        },
+        files: {
+          "<%= folders.tmp %>/styles/bootstrap.css": "<%= folders.app %>/styles/bootstrap.less"
         }
       }
     },
@@ -295,6 +314,7 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
+      'less',
       'jade',
       'concurrent:server',
       'connect:server',
@@ -312,6 +332,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'jade',
+    'less',
     'copy:js',
     'copy:css',
     'useminPrepare',
